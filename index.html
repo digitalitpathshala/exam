@@ -6,27 +6,36 @@
     <title>प्रथम बेसिक कंप्यूटर ज्ञान परीक्षा – 2026</title>
     <style>
         :root { --primary: #2c3e50; --accent: #ffd700; --whatsapp: #25d366; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; line-height: 1.6; color: #333; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; padding: 0; color: #333; }
         
         header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
         header h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; color: var(--accent); }
         
         .container { max-width: 900px; margin: 20px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        
-        .table-container { overflow-x: auto; margin: 25px 0; }
-        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        h2 { text-align: center; color: var(--primary); }
+
+        /* Responsive Table Styles */
+        .table-container { margin: 25px 0; }
+        table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
         th { background: var(--primary); color: white; }
         .timer { font-weight: bold; color: #d32f2f; }
 
-        .instructions { margin-top: 30px; text-align: left; }
-        .instructions h3 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
-        
-        .qr-section { text-align: center; margin: 40px 0; padding: 20px; border: 2px dashed #ccc; border-radius: 10px; background: #fafafa; }
-        .btn { display: inline-block; background: var(--whatsapp); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #128c7e; transform: scale(1.05); }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr { display: block; }
+            thead tr { position: absolute; top: -9999px; left: -9999px; }
+            tr { margin-bottom: 15px; border: 2px solid #ddd; border-radius: 8px; overflow: hidden; }
+            td { border: none; position: relative; padding-left: 50%; text-align: right; background: #fff; }
+            td:before { position: absolute; left: 10px; width: 45%; font-weight: bold; text-align: left; content: attr(data-label); }
+            td:nth-of-type(1):before { content: "दिनांक"; }
+            td:nth-of-type(2):before { content: "दिन"; }
+            td:nth-of-type(3):before { content: "स्लॉट"; }
+            td:nth-of-type(4):before { content: "समय शेष"; }
+        }
 
-        @media (max-width: 600px) { header h1 { font-size: 1.5rem; } }
+        .instructions { margin-top: 30px; text-align: left; }
+        .btn { display: inline-block; background: var(--whatsapp); color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin: 20px 0; }
+        .qr-section { text-align: center; margin-top: 30px; border-top: 2px dashed #ccc; padding-top: 20px; }
     </style>
 </head>
 <body>
@@ -37,11 +46,9 @@
 </header>
 
 <div class="container">
-                                        <h2 style="text-align: center;">
-    Basic Computer Knowledge Exam – 2026<br>
-    "प्रथम बेसिक कंप्यूटर ज्ञान परीक्षा – 2026"
-</h2>
-                 <p><strong>ऑनलाइन परीक्षा स्लॉट एवं महत्वपूर्ण दिशा-निर्देश</strong></p>
+    <h2>Basic Computer Knowledge Exam – 2026<br>"प्रथम बेसिक कंप्यूटर ज्ञान परीक्षा – 2026"</h2>
+    
+    <p><strong>ऑनलाइन परीक्षा स्लॉट एवं महत्वपूर्ण दिशा-निर्देश</strong></p>
     <p>समस्त विद्यार्थियों, परीक्षार्थियों एवं कंप्यूटर शिक्षा के प्रति उत्साही अभ्यर्थियों को सूचित किया जाता है कि "प्रथम बेसिक कंप्यूटर ज्ञान परीक्षा – 2026" के ऑनलाइन आयोजन हेतु परीक्षा स्लॉट निर्धारित कर दिए गए हैं। सभी अभ्यर्थी अपनी सुविधा अनुसार नीचे दिए गए किसी भी उपलब्ध स्लॉट में ऑनलाइन परीक्षा में सम्मिलित हो सकते हैं। परीक्षा के लिए निर्धारित स्लॉट की समयावधि के दौरान ही उपलब्ध रहेगी।</p>
 
     <div class="table-container">
@@ -50,11 +57,11 @@
                 <tr><th>दिनांक</th><th>दिन</th><th>परीक्षा स्लॉट</th><th>समय शेष</th></tr>
             </thead>
             <tbody id="exam-table">
-                <tr data-time="2026-07-01T21:00:00"><td>01 जुलाई 2026</td><td>बुधवार</td><td>रात्रि 09:00 बजे – 10:00 बजे</td><td class="timer"></td></tr>
-                <tr data-time="2026-07-02T11:00:00"><td>02 जुलाई 2026</td><td>गुरुवार</td><td>प्रातः 11:00 बजे – 12:00 बजे</td><td class="timer"></td></tr>
-                <tr data-time="2026-07-02T16:00:00"><td>02 जुलाई 2026</td><td>गुरुवार</td><td>सायं 04:00 बजे – 05:00 बजे</td><td class="timer"></td></tr>
-                <tr data-time="2026-07-03T12:00:00"><td>03 जुलाई 2026</td><td>शुक्रवार</td><td>दोपहर 12:00 बजे – 01:00 बजे</td><td class="timer"></td></tr>
-                <tr data-time="2026-07-03T20:00:00"><td>03 जुलाई 2026</td><td>शुक्रवार</td><td>रात्रि 08:00 बजे – 09:00 बजे</td><td class="timer"></td></tr>
+                <tr data-time="2026-07-01T21:00:00"><td data-label="दिनांक">01 जुलाई 2026</td><td data-label="दिन">बुधवार</td><td data-label="स्लॉट">रात्रि 09:00 - 10:00</td><td data-label="समय" class="timer"></td></tr>
+                <tr data-time="2026-07-02T11:00:00"><td data-label="दिनांक">02 जुलाई 2026</td><td data-label="दिन">गुरुवार</td><td data-label="स्लॉट">प्रातः 11:00 - 12:00</td><td data-label="समय" class="timer"></td></tr>
+                <tr data-time="2026-07-02T16:00:00"><td data-label="दिनांक">02 जुलाई 2026</td><td data-label="दिन">गुरुवार</td><td data-label="स्लॉट">सायं 04:00 - 05:00</td><td data-label="समय" class="timer"></td></tr>
+                <tr data-time="2026-07-03T12:00:00"><td data-label="दिनांक">03 जुलाई 2026</td><td data-label="दिन">शुक्रवार</td><td data-label="स्लॉट">दोपहर 12:00 - 01:00</td><td data-label="समय" class="timer"></td></tr>
+                <tr data-time="2026-07-03T20:00:00"><td data-label="दिनांक">03 जुलाई 2026</td><td data-label="दिन">शुक्रवार</td><td data-label="स्लॉट">रात्रि 08:00 - 09:00</td><td data-label="समय" class="timer"></td></tr>
             </tbody>
         </table>
     </div>
@@ -64,6 +71,11 @@
         <ol>
             <li>ऑनलाइन परीक्षा पूर्णतः निःशुल्क आयोजित की जाएगी।</li>
             <li>प्रत्येक अभ्यर्थी केवल एक बार ऑनलाइन परीक्षा में सम्मिलित हो सकेगा।</li>
+            <li>परीक्षा पूर्ण होने के तुरंत पश्चात परिणाम स्क्रीन पर प्रदर्शित होगा। सफल अभ्यर्थियों को DIGITAL IT PATHSHALA द्वारा सर्टिफिकेट प्रदान किया जाएगा।</li>
+            <li>अनुचित साधन (पुस्तक, मोबाइल, अन्य व्यक्ति) का उपयोग पूर्णतः प्रतिबंधित है। ईमानदारी ही आपकी वास्तविक उपलब्धि है।</li>
+            <li>Browser Refresh, Tab बदलना या बैक बटन दबाने पर परीक्षा स्वतः निरस्त (Cancelled) हो सकती है।</li>
+            <li>पर्यावरण संरक्षण के उद्देश्य से अभ्यर्थियों को ऑनलाइन परीक्षा को प्राथमिकता देने की सलाह दी जाती है।</li>
+            <li>संस्थान परीक्षा के नियमों में संशोधन का अधिकार सुरक्षित रखता है।</li>
             <li>परीक्षा पूर्ण होने के तुरंत पश्चात अभ्यर्थी का परिणाम (Result) स्क्रीन पर प्रदर्शित कर दिया जाएगा। सफल अभ्यर्थियों को DIGITAL IT PATHSHALA द्वारा सर्टिफिकेट प्रदान किया जाएगा।</li>
             <li>परीक्षा के दौरान किसी भी बाहरी सहायता, नोट्स, या मोबाइल का उपयोग पूर्णतः प्रतिबंधित है। ईमानदारी ही आपकी वास्तविक उपलब्धि है।</li>
             <li>परीक्षा के दौरान Browser Refresh, Back Button, Tab बदलना, या Full Screen से बाहर जाने पर परीक्षा तत्काल निरस्त (Cancelled) हो सकती है।</li>
