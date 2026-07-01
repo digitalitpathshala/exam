@@ -116,7 +116,234 @@
 </script>
 
 </body>
-<!-- Footer Section -->
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रमाण पत्र प्रारूप</title>
+    <style>
+        :root { 
+            --primary: #2c3e50; 
+            --accent: #ffd700; 
+            --whatsapp: #25d366; 
+        }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: #f4f7f6; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+           
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+       
+        header { 
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+            color: white; 
+            padding: 25px 15px; /* Padding kam kar di hai */
+            text-align: center; 
+            border-bottom: 4px solid var(--accent); 
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 1.8rem; /* Desktop par sahi size */
+            text-transform: uppercase; 
+            color: var(--accent); 
+            letter-spacing: 1px;
+        }
+        
+        .container { 
+            max-width: 900px; 
+            margin: 20px auto; 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        }
+        h2 { 
+            text-align: center; 
+            color: var(--primary); 
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+       
+        .lang-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #f0f0f0;
+            border: 2px solid #ddd;
+            color: #333;
+            padding: 8px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .instructions { margin-top: 20px; text-align: left; line-height: 1.8; min-height: 80px; }
+        
+       
+        .preview-wrapper {
+            position: relative; 
+            width: 100%;
+            height: 500px; 
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+            background-color: #fafafa;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        .preview-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+       
+        .iframe-shield {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            z-index: 10;
+        }
+        
+        .badge {
+            background-color: #e8f4fd;
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid #d0e3f0;
+        }
+        .qr-section { text-align: center; margin-top: 30px; border-top: 2px dashed #ccc; padding-top: 20px; }
+
+    
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 10px; 
+            }
+            header h1 { 
+                font-size: 1.3rem; 
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 10px;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+            .preview-wrapper { 
+                height: 300px !important;
+            }
+            .instructions p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;">
+
+<header>
+    <h1>Certificate</h1>
+</header>
+
+<div class="container">
+    <h2 id="main-title"> पाठ्यक्रम प्रमाण पत्र</h2>
+    
+    
+    <div class="lang-container">
+        <button class="lang-btn active" onclick="switchLang('hi', this)">हिन्दी</button>
+        <button class="lang-btn" onclick="switchLang('en', this)">English</button>
+    </div>
+    
+    <div style="text-align: center;">
+        <div class="badge" id="badge-text">✨ प्रत्यक्ष प्रारूप अवलोकन</div>
+    </div>
+    
+    
+    <div class="instructions">
+        <p id="text-desc">सभी शिक्षार्थियों को यह सूचित किया जाता है कि पाठ्यक्रम अथवा कार्यक्रम को सफलतापूर्वक पूर्ण करने पर आपको इस प्रकार का एक <strong> प्रमाण पत्र</strong> प्रदान किया जाएगा। आप नीचे इसी जालस्थल पर इसका प्रत्यक्ष प्रारूप देख सकते हैं।</p>
+    </div>
+
+    <div class="preview-wrapper" oncontextmenu="return false;">
+        <div class="iframe-shield"></div> 
+        <iframe src="https://drive.google.com/file/d/1XDOkJGDyW5IDb3Coo17rn_4HKQFJSYGc/preview" allow="autoplay"></iframe>
+    </div>
+
+    <div class="qr-section">
+        <p id="text-note" style="font-size: 12px; color: #777; margin: 0;">* यह केवल एक काल्पनिक प्रतिरूप है। आपका मूल प्रमाण पत्र आपके सत्यापित नाम  के साथ निर्मित किया जाएगा।</p>
+    </div>
+</div>
+
+<script>
+    
+    const content = {
+        hi: {
+            title: "पाठ्यक्रम प्रमाण पत्र",
+            badge: "✨ प्रारूप अवलोकन",
+            desc: "सभी शिक्षार्थियों को यह सूचित किया जाता है कि पाठ्यक्रम अथवा कार्यक्रम को सफलतापूर्वक पूर्ण करने पर आपको इस प्रकार का एक <strong> प्रमाण पत्र</strong> प्रदान किया जाएगा। आप नीचे इसका प्रत्यक्ष प्रारूप देख सकते हैं।",
+            note: "* यह केवल एक काल्पनिक प्रतिरूप है। आपका मूल प्रमाण पत्र आपके नाम एवं के साथ निर्मित किया जाएगा।"
+        },
+        en: {
+            title: "Course Certificate",
+            badge: "✨ Sample Preview",
+            desc: "All students are hereby informed that upon successfully completing the course/event, you will receive a <strong> Certificate</strong> like this. You can view the sample right below on the website.",
+            note: "* This is only a sample copy. Your original certificate will be generated with your name ."
+        }
+    };
+
+    
+    function switchLang(lang, button) {
+        document.getElementById('main-title').innerText = content[lang].title;
+        document.getElementById('badge-text').innerText = content[lang].badge;
+        document.getElementById('text-desc').innerHTML = content[lang].desc;
+        document.getElementById('text-note').innerText = content[lang].note;
+
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    }
+
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && ['I','C','J'].includes(String.fromCharCode(e.keyCode))) ||
+            (e.ctrlKey && ['U','S'].includes(String.fromCharCode(e.keyCode)))) {
+            return false;
+        }
+    };
+
+    document.ondragstart = function() { return false; };
+</script>
+
+</body>
+
 <footer style="background: #2c3e50; color: #ecf0f1; padding: 30px 20px; text-align: center; margin-top: 40px; border-top: 5px solid #ffd700;">
     <p style="font-size: 1.1rem; margin-bottom: 10px;">
         अधिक जानकारी के लिए संपर्क करें: 
